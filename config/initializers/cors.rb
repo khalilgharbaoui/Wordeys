@@ -1,7 +1,7 @@
 class Wordeys::Application
   config.middleware.insert_before 0,  "Rack::Cors", debug: true, logger: (-> { Rails.logger }) do
     allow do
-      origins 'localhost:3000', '192.168.0.107'
+      origins 'localhost:3000', '192.168.0.107', 'http://188.166.49.229/'
 
       resource '/cors',
         headers: :any,
